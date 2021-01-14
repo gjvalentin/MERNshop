@@ -187,9 +187,11 @@ const OrderScreen = ({ match, history }) => {
                                  <Col>Items</Col>
                                  <Col>
                                     $
-                                    {+order.totalPrice -
+                                    {(
+                                       +order.totalPrice -
                                        +order.shippingPrice -
-                                       +order.taxPrice}
+                                       +order.taxPrice
+                                    ).toFixed(2)}
                                  </Col>
                               </Row>
                            </ListGroup.Item>
